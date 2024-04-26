@@ -32,8 +32,19 @@ export default function Navs() {
             <Link href={'/'} className="text-lg font-medium">home </Link>
             <Link href={'/store/1'} className="text-lg font-medium">store </Link>
             <Link href={'/contact'} className="text-lg font-medium">contact us </Link>
-            <Link href={'/orders'} className="text-lg font-medium">orders</Link>
-            <Link href={'/cart'} className="text-lg font-medium"><LuShoppingCart size={25} /></Link>
+
+            {
+                user ? <Link href={'/orders'} className="text-lg font-medium">orders</Link>
+                    :
+                    null
+            }
+
+            {
+                user ? <Link href={'/cart'} className="text-lg font-medium"><LuShoppingCart size={25} /></Link>
+                    :
+                    null
+            }
+
             {
                 user ? <button onClick={logOut} className="text-black text-lg font-semibold p-3 px-6 flex gap-3 items-center justify-center"><FaUser title='profile' size={20} />log out</button>
                     :

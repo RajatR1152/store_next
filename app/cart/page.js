@@ -36,11 +36,6 @@ export default function page() {
         })
     }
 
-    if (!user?.email) {
-        router.push('/login');
-        return null; 
-    }
-
     return (
         <div className="container w-full md:p-5 bg-slate-50">
             <div className="container mx-auto mt-10">
