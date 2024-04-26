@@ -38,6 +38,7 @@ export default function page() {
 
     if (!user?.email) {
         router.push('/login');
+        return null; 
     }
 
     return (
